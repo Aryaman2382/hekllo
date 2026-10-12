@@ -1,0 +1,48 @@
+{
+  "model_type": "XGBoost Multiclass Classifier",
+  "target": "TrendCategory",
+  "forecast_horizon": 7,
+  "num_classes": 5,
+  "classes": [
+    "Downtrend",
+    "Sideways",
+    "Strong Downtrend",
+    "Strong Uptrend",
+    "Uptrend"
+  ],
+  "features": [
+    "Volatility20",
+    "MaxPrice20",
+    "MaxDrawdown",
+    "GapRisk",
+    "DailyReturn",
+    "Return5",
+    "Return20",
+    "MA5",
+    "MA20",
+    "VolumeRatio",
+    "RSI14",
+    "MACD",
+    "MACD_Signal",
+    "MACD_Hist",
+    "BB_Width"
+  ],
+  "best_f1_weighted": 0.4989,
+  "test_accuracy": 0.4569,
+  "test_f1_weighted": 0.4351,
+  "optuna_trials": 50,
+  "best_params": {
+    "n_estimators": 459,
+    "max_depth": 3,
+    "learning_rate": 0.012123773300365761,
+    "subsample": 0.7770472134567841,
+    "colsample_bytree": 0.8437643012427588,
+    "min_child_weight": 2,
+    "gamma": 3.9577853943602905,
+    "reg_alpha": 0.0004036581943347716,
+    "reg_lambda": 2.0313060939031962e-07
+  },
+  "train_samples": 20801,
+  "val_samples": 4457,
+  "test_samples": 4458
+}
